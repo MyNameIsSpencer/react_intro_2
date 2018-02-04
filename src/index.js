@@ -1,13 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Post from './App'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Post from './App';
 import './index.css';
 // import registerServiceWorker from './registerServiceWorker';
 
 var post = {
   postTitle: "Galactizarauz",
-  postAuthor: "Dinotron",
-  postBody: "What do you do when faced with a life crisis you don't have the CPU to compute?",
+  postAuthors: [
+    "Dinotron",
+    "Tiny T-Rex",
+    "Ivory Iguanodon"
+  ],
+  postBody: "When a dinosaur is faced with a life crisis his CPU can't compute...",
   postComments: [
     " Blew my MIND!!",
     " I never thought I could relate so much to a robotic dinosaur.",
@@ -15,12 +19,14 @@ var post = {
   ]
 }
 
+
+
+
 ReactDOM.render(
   <Post
   title = {post.postTitle}
-  author = {post.postAuthor}
+  allAuthors = {post.postAuthors}
   body = {post.postBody}
   comments = {post.postComments}/>,
    document.getElementById('root')
  )
-// registerServiceWorker();

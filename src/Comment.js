@@ -4,7 +4,8 @@ class Comment extends Component {
   render () {
     return (
       <div>
-        <p>{this.props.body}</p>
+        <p class="comment">{this.props.body} {"\n"}</p>
+        <p>{"\n"} </p>
       </div>
     )
   }
